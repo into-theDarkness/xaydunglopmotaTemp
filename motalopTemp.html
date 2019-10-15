@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>motaloptemp</title>
+</head>
+<body>
+<script>
+    function Temperature(celcius) {
+        this.celcius = celcius;
+        this.getChangeCk = function () {
+            return celcius + 273.15;
+        }
+        this.getChangeCf = function () {
+            return celcius*1.8 + 32;
+        }
+        this.getCelcius = function () {
+            return celcius*1;
+        }
+    }
+    let tem = new Temperature(25);
+    let changeck = tem.getChangeCk();
+    let changecf = tem.getChangeCf();
+    let celcius  = tem.getCelcius();
+    alert("Celcius: "+ celcius + "Farenhei: " + changecf + " Kenvin: "+changeck);
+
+</script>
+</body>
+</html>
